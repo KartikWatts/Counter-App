@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Japa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>
+      <ion-card>
+        <ion-item>
+      Swipe: 
+        </ion-item>
+      </ion-card>
+      </ion-col>
+    <ion-col col-4>
+  <button ion-button large color="danger" round (swipe)="swipeEvent($event)">
+    जाप:&nbsp;<b>{{tap}}</b>&nbsp; मनके</button>
+    </ion-col>
+    <ion-col col-2 style="text-align: right;">
+  
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>
+      <button ion-button color="primary" style="text-align: center;" (tap)="resetEvent($event)">
+    अवरुद्ध &nbsp;<b>X</b></button>
+      </ion-col>
+    <ion-col col-4 style="text-align: center;">
+      <h2>OR</h2>
+      
+    </ion-col>
+    <ion-col col-4>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>
+      <ion-card>
+        <ion-item>
+          Tap: 
+        </ion-item>
+      </ion-card>
+      </ion-col>
+    <ion-col col-4>
+      
+  <button ion-button large color="danger" round (tap)="tapEvent($event)">
+    जाप:&nbsp;<b>{{tap}}</b>&nbsp; मनके</button>
+    </ion-col>
+    <ion-col col-4>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-card (swipe)="swipeEvent($event)">
+    <ion-item style="text-align:center;">
+      <b>{{round}}</b>&nbsp;: माला सम्पूर्ण : &nbsp; {{left}} &nbsp; शेष हैं
+    </ion-item>
+  </ion-card>
+
+<ion-card> 
+    <ion-grid>
+      <ion-row>
+       <ion-col col-8 style="text-align:right;">
+      <h2><b>{{message}}</b></h2>
+       </ion-col>
+       <ion-col col-4 style="text-align:right;">
+          <button ion-button color="dark" outline round (tap)="Reset($event)">Reset</button>
+       </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
